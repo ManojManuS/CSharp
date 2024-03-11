@@ -26,7 +26,7 @@ namespace ComplexNumbers
 
             // Perform the addition and display the result
             Complex result = complex1 + complex2;
-            Console.WriteLine($"Result of addition: {result}");
+            Console.WriteLine("Result of addition: " + result);
         }
     }
 
@@ -50,7 +50,7 @@ namespace ComplexNumbers
 
         public override string ToString()
         {
-            return $"{real} + {imaginary}i";
+            return real + " + " + imaginary + "i";
         }
     }
 }

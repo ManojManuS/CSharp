@@ -11,8 +11,8 @@ namespace AbstractShapes
             Triangle triangle = new Triangle(3, 4, 5);
 
             // Calculate and display area and perimeter
-            Console.WriteLine($"Circle area: {circle.CalculateArea():0.00}, Circle perimeter: {circle.CalculatePerimeter():0.00}");
-            Console.WriteLine($"Triangle area: {triangle.CalculateArea():0.00}, Triangle perimeter: {triangle.CalculatePerimeter():0.00}");
+            Console.WriteLine("Circle area: " + circle.CalculateArea().ToString("0.00") + ", Circle perimeter: " + circle.CalculatePerimeter().ToString("0.00"));
+            Console.WriteLine("Triangle area: " + triangle.CalculateArea().ToString("0.00") + ", Triangle perimeter: " + triangle.CalculatePerimeter().ToString("0.00"));
         }
     }
 

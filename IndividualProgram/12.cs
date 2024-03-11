@@ -11,16 +11,15 @@ namespace ResizableDemo
 
             // Display the initial dimensions
             Console.WriteLine("Initial dimensions:");
-            Console.WriteLine($"Width: {rectangle.Width}, Height: {rectangle.Height}");
+            Console.WriteLine("Width: " + rectangle.Width + ", Height: " + rectangle.Height);
 
             // Resize the rectangle
             rectangle.ResizeWidth(15);
             rectangle.ResizeHeight(20);
 
-
             // Display the resized dimensions
             Console.WriteLine("\nResized dimensions:");
-            Console.WriteLine($"Width: {rectangle.Width}, Height: {rectangle.Height}");
+            Console.WriteLine("Width: " + rectangle.Width + ", Height: " + rectangle.Height);
         }
     }
 

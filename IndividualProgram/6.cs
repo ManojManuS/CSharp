@@ -1,46 +1,46 @@
 using System;
 
-namespace PascalTriangle
+namespace FloydsTriangle
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.Write("Enter the number of rows in Pascal's Triangle: ");
+            Console.Write("Enter the number of rows in Floyd's Triangle: ");
             int numRows = Convert.ToInt32(Console.ReadLine());
 
-            int[][] triangle = GeneratePascalTriangle(numRows);
+            int[][] triangle = GenerateFloydsTriangle(numRows);
 
-            Console.WriteLine("\nPascal's Triangle:");
-            PrintPascalTriangle(triangle);
+            Console.WriteLine("\nFloyd's Triangle:");
+            PrintFloydsTriangle(triangle);
         }
 
-        static int[][] GeneratePascalTriangle(int numRows)
+        static int[][] GenerateFloydsTriangle(int numRows)
         {
             int[][] triangle = new int[numRows][];
+
+            int num = 1;
 
             for (int row = 0; row < numRows; row++)
             {
                 triangle[row] = new int[row + 1];
-                triangle[row][0] = 1;
-                triangle[row][row] = 1;
 
-                for (int col = 1; col < row; col++)
+                for (int col = 0; col <= row; col++)
                 {
-                    triangle[row][col] = triangle[row - 1][col - 1] + triangle[row - 1][col];
+                    triangle[row][col] = num++;
                 }
             }
 
             return triangle;
         }
 
-        static void PrintPascalTriangle(int[][] triangle)
+        static void PrintFloydsTriangle(int[][] triangle)
         {
             for (int row = 0; row < triangle.Length; row++)
             {
                 for (int col = 0; col < triangle[row].Length; col++)
                 {
-                    Console.Write($"{triangle[row][col],3} ");
+                    Console.Write(triangle[row][col].ToString().PadLeft(3) + " ");
                 }
                 Console.WriteLine();
             }

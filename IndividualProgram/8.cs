@@ -24,14 +24,14 @@ namespace StackImplementation
                     Console.Write("Enter the value to push onto the stack: ");
                     int value = Convert.ToInt32(Console.ReadLine());
                     stack.Push(value);
-                    Console.WriteLine($"Pushed {value} onto the stack.");
+                    Console.WriteLine("Pushed " + value + " onto the stack.");
                 }
                 else if (input.ToLower() == "pop")
                 {
                     try
                     {
                         int value = stack.Pop();
-                        Console.WriteLine($"Popped {value} from the stack.");
+                        Console.WriteLine("Popped " + value + " from the stack.");
                     }
                     catch (InvalidOperationException ex)
                     {
